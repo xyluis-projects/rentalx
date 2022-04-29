@@ -4,7 +4,7 @@
   "description": "Rental - A place to rent a car",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn -r dotenv/config src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/xyluis-projects/rentalx#readme",
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.13",
     "@types/multer": "^1.4.7",
     "@types/node": "^17.0.25",
