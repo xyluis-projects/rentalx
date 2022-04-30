@@ -10,18 +10,8 @@ import {
 export class SpecificationsRepository implements ISpecificationsRepository {
   private repository: Repository<Specification>;
 
-  private static INSTANCE: SpecificationsRepository;
-
-  private constructor() {
+  constructor() {
     this.repository = dataSource.getRepository(Specification);
-  }
-
-  public static getInstance(): SpecificationsRepository {
-    if (!SpecificationsRepository.INSTANCE) {
-      SpecificationsRepository.INSTANCE = new SpecificationsRepository();
-    }
-
-    return SpecificationsRepository.INSTANCE;
   }
 
   async create({ name, description }: ICreateSpecificationDTO): Promise<void> {
