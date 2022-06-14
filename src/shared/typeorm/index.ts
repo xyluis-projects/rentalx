@@ -7,7 +7,7 @@ export const dataSource = new DataSource({
   username: process.env.PG_USERNAME,
   password: process.env.PG_PASSWORD,
   database: process.env.PG_DATABASE,
-  migrations: ['./src/database/migrations/*.ts'],
+  migrations: ['./src/shared/typeorm/migrations/*.ts'],
   entities: ['./src/modules/**/entities/*.ts'],
   synchronize: true,
   migrationsTableName: 'migrations',
